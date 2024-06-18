@@ -13,7 +13,7 @@ document.getElementById('transition-table-form').addEventListener('submit', func
         var [from, to] = transition.split('=');
         var [state, input] = from.split(',');
         state = state.trim();
-        input = input;
+        input = input.trim();
         to = to.trim();
         
         if (!transitionTable[state]) {
