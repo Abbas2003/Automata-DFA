@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Transition Table</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- SweetAlert CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body>
+    <div class="container mt-5">
+        <h2 class="text-center fw-bold">Transition Table Input and String Validation</h2>
+        <form id="transition-table-form">
+            <div class="form-group">
+                <label for="states">States (comma separated):</label>
+                <input type="text" class="form-control" id="states" placeholder="e.g. q0, q1, q2" required>
+            </div>
+            <div class="form-group">
+                <label for="inputs">Inputs (comma separated):</label>
+                <input type="text" class="form-control" id="inputs" placeholder="e.g. 0, 1" required>
+            </div>
+            <div class="form-group">
+                <label for="transitions">Transitions (comma separated, use format 'state,input=newState'):</label>
+                <textarea class="form-control" id="transitions" rows="5" placeholder="e.g. q0,0=q1; q0,1=q0; q1,0=q0; q1,1=q1" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="initialState">Initial State:</label>
+                <input type="text" class="form-control" id="initialState" placeholder="e.g. q0" required>
+            </div>
+            <div class="form-group">
+                <label for="finalStates">Final States (comma separated):</label>
+                <input type="text" class="form-control" id="finalStates" placeholder="e.g. q1" required>
+            </div>
+            <div class="form-group">
+                <label for="inputString">Input String:</label>
+                <input type="text" class="form-control" id="inputString" placeholder="e.g. 0101" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="result" class="mt-4"></div>
+    </div>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="main.js"></script>
 </body>
 </html>
