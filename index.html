@@ -13,9 +13,9 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="text-center fst-italic fw-bold py-2 shadow border rounded">Transition Table Input and String Validation</h2>
+        <h2 class="text-center fst-italic py-2 shadow border rounded bg-dark text-white">Transition Table Input and String Validation</h2>
         <form id="transition-table-form">
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <label for="states">States (comma separated):</label>
                 <input type="text" class="form-control" id="states" placeholder="e.g. q0, q1, q2" required>
             </div>
@@ -24,7 +24,7 @@
                 <input type="text" class="form-control" id="inputs" placeholder="e.g. 0, 1" required>
             </div>
             <div class="form-group">
-                <label for="transitions">Transitions (comma separated, use format 'state,input=newState'):</label>
+                <label for="transitions">Transitions (comma separated, use format '<strong>state,input=newState</strong>'):</label>
                 <textarea class="form-control" id="transitions" rows="5" placeholder="e.g. q0,0=q1; q0,1=q0; q1,0=q0; q1,1=q1" required></textarea>
             </div>
             <div class="form-group">
@@ -52,6 +52,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- SweetAlert JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="main.js"></script>
+    <script src="./codebase/main.js"></script>
 </body>
 </html>

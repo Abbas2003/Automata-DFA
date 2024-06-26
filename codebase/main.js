@@ -7,6 +7,7 @@ document.getElementById('transition-table-form').addEventListener('submit', func
     var initialState = document.getElementById('initialState').value.trim();
     var finalStates = document.getElementById('finalStates').value.split(',').map(f => f.trim());
     var inputString = document.getElementById('inputString').value.trim();
+    console.log(states, inputs, transitionsRaw, initialState, finalStates, inputString)
     
     var transitionTable = {};
     transitionsRaw.forEach(transition => {
